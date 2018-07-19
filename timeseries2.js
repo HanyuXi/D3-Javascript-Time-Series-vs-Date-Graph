@@ -10,6 +10,9 @@ var data = {date:[],time:[]}
 var rescue = {date:[],time:[]}
 var technique_score = window.shabi.timegraph_results.technique_score
 //Controller Data
+//I used Python Flask as my backend so I named a variable shabi to take the data passed from python through Jinja2
+//.timegraph is just the dictionary key name.
+
 var data2 = {date:window.shabi.timegraph_results.date, time:window.shabi.timegraph_results.time}
 data2.time.forEach(function(d){
   d = "1995-12-17T"+d
@@ -70,6 +73,7 @@ var x = d3.scaleTime()
     .domain([d3.min(date_array),d3.max(date_array)])
     //.domian(d3.extent(data.date))
     .range([0,width]);
+//It's for the legend
 var colorscale = d3.scaleLinear()
     .domain([0,100])
     .range(["#FF0000",
