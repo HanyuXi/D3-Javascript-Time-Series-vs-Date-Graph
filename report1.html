@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  -->
+
+<link rel="stylesheet" href="/static/css/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+<body>
+<!--text alignment  -->
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-top w3-left-align w3-large w3-red">
+    <a class="w3-bar-item w3-right w3-hide-large w3-hover-white w3-large" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="#" >
+      <img src="/static/css/logo.PNG" class="w3-bar-item" style = "width:300px;height:60px;border:0;z-index:5;background-color: white" >
+    </a>
+    <div class="w3-bar-item w3-centered w3-text-white"><b> ADHERENCE REPORT.</b> </div>
+  </div>
+</div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style=background-color: gainsboro" >
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-container">
+      <!--<h1 class="w3-text-teal">Heading</h1>-->
+      <p class="alignleft"><b>USER ID:</b> A12 </p>
+      <p class="alignright"> <b>TIMEFAME:</b> March 5th to April 6th </p>
+    </div>
+<script type="text/javascript">
+	var shabi = {{ data | safe }};
+</script>
+ <div style="width:14%;background-color:red;color:white;"><b>SUMMARY</b></div>
+ <hr>
+    <div class="w3-row ">
+      <button type="submit" style = "background-color: white; border: none"><img src = "/static/css/controller.png" height = 100, width =100><b><script>document.write(window.shabi.icon_results.rescue)</script>   </b><n>RESCUE    </n> </button>
+      <button type="submit" style = "margin-left:0px;background-color: white; border: none"><img src = "/static/css/Persistence.png" height = 100, width =100><b><script>document.write(window.shabi.icon_results.controller)</script>    </b><n>CONTROLLER</n> </button>
+      <button type="submit" style = "margin-left:0px;background-color: white; border: none"><img src = "/static/css/rescue.png" height = 100, width =100><b><script>document.write(window.shabi.icon_results.p.toFixed(2))</script>%    </b><n>PERSISTENCE</n> </button>
+      <button type="submit" style = "margin-left:0px;background-color: white; border: none"><img src = "/static/css/Technique.png" height = 80, width =80><b><script>document.write(window.shabi.icon_results.T.toFixed(2))</script>%    </b><n>TECHNIQUE</n> </button>
+    </div>
+<div style="width:14%;background-color:red;color:white;"><b>Trends</b></div>
+<hr>
+<div id ='timeseries'></div>
+
+<div style="width:14%;background-color:red;color:white;"><b>TECHNIQUE ERRORS</b></div>
+<hr>
+<div id ='barchart'></div>
+
+<div style="width:14%;background-color:red;color:white;"><b>DATA SUMMARY</b></div>
+<hr>
+<div id ='table'></div>
+
+
+<script type="text/javascript">
+	var shabi = {{ data | safe }};
+var doc = new PDFDocument();
+var stream = doc.pipe(blobStream());
+
+
+</script>
+<script type="text/javascript" src ="/static/js/timeseries2.js" ></script>
+<script type="text/javascript" src ="/static/js/barchart.js" ></script>
+<script type="text/javascript" src ="/static/js/summarytable.js" ></script>
+<script type="text/javascript" src="/static/js/pdfkit.js"></script>
+<!-- load D3plus after D3js -->
+</script>
+
+
+
+</script>
